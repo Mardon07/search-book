@@ -199,7 +199,11 @@ const Books = () => {
             page={page}
             count={pages}
             renderItem={(item) => (
-              <PaginationItem component={Link} to={`/${item.page === 1 ? '' : `?page=${item.page}`}`} {...item} />
+              <PaginationItem
+                component={Link}
+                to={`/search-book/${item.page === 1 ? '' : `?page=${item.page}`}`}
+                {...item}
+              />
             )}
           />
         </Box>
