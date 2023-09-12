@@ -11,7 +11,7 @@ const Book: React.FC<BookProps> = ({ book }) => {
     <>
       <Link
         data-id={book.id}
-        to={book.id || '/'}
+        to={book.id || '/search-book'}
         className="cardLink"
         style={{ textDecoration: 'none', color: 'inherit' }}
       >
@@ -24,12 +24,7 @@ const Book: React.FC<BookProps> = ({ book }) => {
             component="img"
             height="100%"
             width="100%"
-            image={`${
-              book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail
-            }?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${
-              book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail
-            }?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            image={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail}
             alt={book.volumeInfo.title}
             loading="lazy"
           />
