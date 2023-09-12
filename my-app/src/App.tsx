@@ -7,7 +7,7 @@ import RootLayout from './layouts/RootLayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/search-book" element={<RootLayout />}>
       <Route index element={<Books />} />
       <Route path=":id" element={<BookItem />} errorElement={<NotFound />} />
     </Route>
