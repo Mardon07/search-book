@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://mardon07.github.io/search-book",
   "private": true,
   "dependencies": {
     "@mui/icons-material": "^5.14.8",
@@ -24,6 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -55,6 +58,7 @@
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "gh-pages": "^6.0.0",
     "prettier": "^3.0.3",
     "sass": "^1.66.1",
     "styled-components": "^5.3.11"
